@@ -1,7 +1,7 @@
 #ifndef PLANE_H
 #define PLANE_H
 
-#include "Transport.h"
+#include "transport.h"
 
 class Plane : public Transport {
 public:

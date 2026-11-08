@@ -1,4 +1,4 @@
-#include "Plane.h"
+#include "plane.h"
 
 Plane::Plane(const char* b, int y, int alt) {
     strcpy(brand, b); 
