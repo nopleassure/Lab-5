@@ -176,10 +176,47 @@ graph TD
     Transport["Transport<br>(Базовый класс)"]
 
     %% Зависимости компонентов
-    Main -->|Использует| Plane
-    Main -->|Использует| Car
-    Plane -->|Наследует| Transport
-    Car -->|Наследует| Transport
+    Main -.->|Использует| Plane
+    Main -.->|Использует| Car
+    Plane ===>|Наследует| Transport
+    Car ===> |Наследует| Transport
+```
+
+<h2> Диаграмма классов </h2>
+P.S. по примеру отчета я так поняла это не нужно, но в методичке указана и данная схема, пусть будет тоже.
+
+```mermaid
+classDiagram
+    %% Указываем связь наследования (стрелка с пустым треугольником)
+    Transport <|-- Plane
+    Transport <|-- Car
+
+    %% Описание базового класса
+    class Transport {
+        #char brand[30]
+        #int year
+        +Transport()
+        +getYear() int
+        +setBrand(char* b) void
+        +setYear(int y) void
+        +show() void
+    }
+
+    %% Описание класса-наследника 1
+    class Plane {
+        -int altitude
+        +Plane(char* b, int y, int alt)
+        +setAltitude(int alt) void
+        +show() void
+    }
+
+    %% Описание класса-наследника 2
+    class Car {
+        -int speed
+        +Car(char* b, int y, int s)
+        +setSpeed(int s) void
+        +show() void
+    }
 ```
 
 <h2>Файл main.cpp</h2>
