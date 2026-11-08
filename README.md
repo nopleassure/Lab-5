@@ -4,10 +4,12 @@
 Вариант №16\
 Реализация транспортных средств (поиск самого нового)
 
+***
+
 <h2>Базовый класс (transport)</h2>
 
 transport.h
-```
+```cpp
 #ifndef TRANSPORT_H
 #define TRANSPORT_H
 
@@ -32,7 +34,7 @@ protected:
 ```
 transport.cpp
 
-```
+```cpp
 #include "transport.h"
 
 Transport::Transport() {
@@ -60,7 +62,7 @@ void Transport::setYear(int y) {
 <h2>Класс-наследник 1 (plane)</h2>
 plane.h
 
-```
+```cpp
 #ifndef PLANE_H
 #define PLANE_H
 
@@ -79,7 +81,7 @@ private:
 ```
 
 plane.cpp
-```
+```cpp
 #include "plane.h"
 
 Plane::Plane(const char* b, int y, int alt) {
@@ -100,7 +102,7 @@ void Plane::show() {
 <h2>Класс-наследник 2 (car)</h2>
 
 car.h
-```
+```cpp
 #ifndef CAR_H
 #define CAR_H
 
@@ -119,7 +121,7 @@ private:
 ```
 car.cpp
 
-```
+```cpp
 #include "car.h"
 
 Car::Car(const char* b, int y, int s) {
@@ -182,7 +184,7 @@ graph TD
 
 <h2>Файл main.cpp</h2>
 
-```
+```cpp
 #include <iostream>
 #include "transport.h"
 #include "plane.h"
@@ -258,7 +260,13 @@ int main() {
 }
 ```
 
-<h2>Заключение</h2>
-В ходе выполнения лабораторной работы был изучен механизм открытого наследования в языке C++. Создан базовый класс «transport» и производные классы «plane» и «car». Была реализована виртуальная функция для обеспечения полиморфизма, а также разработана программа с консольным меню, обрабатывающая массив указателей на базовый класс и вычисляющая НОВЕЙШЕЕ транспортное средство. Цель работы достигнута
+<h2>Демонстрация работы программы</h2>
 
-<img width="498" height="299" alt="toyota-yaris" src="https://github.com/user-attachments/assets/e2fd4592-666c-43f9-846c-1e54c3163835" />
+https://github.com/user-attachments/assets/c116694e-531c-46c0-97c7-b62173597991
+
+<h2>Заключение</h2>
+В ходе выполнения лабораторной работы был изучен механизм открытого наследования в языке C++. Создан базовый класс «transport» и производные классы «plane» и «car». Была реализована виртуальная функция для обеспечения полиморфизма, а также разработана программа с консольным меню, обрабатывающая массив указателей на базовый класс и вычисляющая НОВЕЙШЕЕ транспортное средство.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e2fd4592-666c-43f9-846c-1e54c3163835" alt="toyota-yaris" width="498" height="299">
+</div>
