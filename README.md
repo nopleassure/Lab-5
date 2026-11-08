@@ -138,16 +138,6 @@ void Car::show() {
 
 ```mermaid
 graph TD
-%% Узлы (файлы)
-main["main.cpp"]
-th["Transport.h"]
-tc["Transport.cpp"]
-ph["Plane.h"]
-pc["Plane.cpp"]
-ch["Car.h"]
-cc["Car.cpp"]
-
-graph TD
     %% Узлы (файлы)
     main["main.cpp"]
     th["Transport.h"]
@@ -165,7 +155,6 @@ graph TD
     pc -->|#include| ph
     cc -->|#include| ch
     tc -->|#include| th
-
     ph -->|#include| th
     ch -->|#include| th
 ```
@@ -173,7 +162,20 @@ graph TD
 
 Диаграмма компонентов
 
+```mermaid
+graph TD
+    %% Узлы (компоненты)
+    Main[" Main.exe<br>(Главная программа)"]
+    Plane[" Plane<br>(Самолет)"]
+    Car[" Car<br>(Автомобиль)"]
+    Transport["Transport<br>(Базовый класс)"]
 
+    %% Зависимости компонентов
+    Main -->|Использует| Plane
+    Main -->|Использует| Car
+    Plane -->|Наследует| Transport
+    Car -->|Наследует| Transport
+```
 
 Файл main.cpp
 ```
