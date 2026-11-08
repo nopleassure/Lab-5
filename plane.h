@@ -12,4 +12,4 @@ private:
     int altitude; 
 };
 
-#endif // PLANE_H
+#endif
